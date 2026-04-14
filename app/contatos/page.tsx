@@ -56,7 +56,11 @@ export default function DiscordCard() {
                       {status.label}
                     </p>
                     <div className="flex items-center gap-2 ml-4">
-                      <p className="text-md text-neutral-500 font-normal">{activity.name}{activity.details ? `: ${activity.details}` : ''}</p>
+                      {activity && (
+                        <p className="text-md text-neutral-500 font-normal">
+                          {activity.name}{activity?.details ? `: ${activity.details}` : ''}
+                        </p>
+                      )}
                     </div>
                   </div>
               </div>
